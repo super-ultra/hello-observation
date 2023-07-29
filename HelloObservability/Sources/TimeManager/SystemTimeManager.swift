@@ -7,6 +7,7 @@
 
 import Foundation
 import AsyncAlgorithms
+import ConcurrencyToolbox
 
 
 actor SystemTimeManager: TimeManager {
@@ -19,14 +20,8 @@ actor SystemTimeManager: TimeManager {
     
     // MARK: - TimeManager
     
-    private(set) nonisolated var time: Duration {
-        get {
-            _time.wrappedValue
-        }
-        set {
-            _time.wrappedValue = newValue
-        }
-    }
+    @Atomic
+    private(set) nonisolated var time: Duration = .zero
     
     private(set) lazy var timeStream = AsyncStream<Duration> { continuation in
         timeStreamContinuation = continuation
@@ -36,7 +31,6 @@ actor SystemTimeManager: TimeManager {
     
     private var timeStreamContinuation: AsyncStream<Duration>.Continuation? = nil
     private let step: Duration = .seconds(1)
-    private let _time: Atomic<Duration> = Atomic(wrappedValue: .zero)
     
     private func start() async {
         let start = SuspendingClock.Instant.now
