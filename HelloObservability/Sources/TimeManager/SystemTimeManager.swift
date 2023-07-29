@@ -19,9 +19,12 @@ actor SystemTimeManager: TimeManager {
     
     // MARK: - TimeManager
     
-    private(set) var time: Duration = .zero {
-        didSet {
-            timeStreamContinuation?.yield(time)
+    private(set) nonisolated var time: Duration {
+        get {
+            _time.wrappedValue
+        }
+        set {
+            _time.wrappedValue = newValue
         }
     }
     
@@ -32,13 +35,14 @@ actor SystemTimeManager: TimeManager {
     // MARK: - Private
     
     private var timeStreamContinuation: AsyncStream<Duration>.Continuation? = nil
-    private var step: Duration = .seconds(1)
+    private let step: Duration = .seconds(1)
+    private let _time: Atomic<Duration> = Atomic(wrappedValue: .zero)
     
     private func start() async {
         let start = SuspendingClock.Instant.now
         for await newTime in AsyncTimerSequence.repeating(every: step) {
             time = start.duration(to: newTime)
-            print(time)
+            timeStreamContinuation?.yield(time)
         }
     }
 

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B1B445272A75BAC9008E81D9 /* Atomic.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B445262A75BAC9008E81D9 /* Atomic.swift */; };
 		B1CF07D82A741BD6001DFBC6 /* HelloObservabilityApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CF07D72A741BD6001DFBC6 /* HelloObservabilityApp.swift */; };
 		B1CF07DA2A741BD6001DFBC6 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CF07D92A741BD6001DFBC6 /* TimerView.swift */; };
 		B1CF07DC2A741BD9001DFBC6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1CF07DB2A741BD9001DFBC6 /* Assets.xcassets */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B1B445262A75BAC9008E81D9 /* Atomic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Atomic.swift; sourceTree = "<group>"; };
 		B1CF07D42A741BD6001DFBC6 /* HelloObservability.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloObservability.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1CF07D72A741BD6001DFBC6 /* HelloObservabilityApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloObservabilityApp.swift; sourceTree = "<group>"; };
 		B1CF07D92A741BD6001DFBC6 /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
@@ -44,6 +46,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B1B445252A75BABC008E81D9 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				B1B445262A75BAC9008E81D9 /* Atomic.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
 		B1CF07CB2A741BD6001DFBC6 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +91,7 @@
 		B1CF07E72A741BFA001DFBC6 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				B1B445252A75BABC008E81D9 /* Core */,
 				B1CF07F02A758AAA001DFBC6 /* TimeView */,
 				B1CF07EB2A758A52001DFBC6 /* TimeManager */,
 				B1CF07D72A741BD6001DFBC6 /* HelloObservabilityApp.swift */,
@@ -196,6 +207,7 @@
 				B1CF07F52A7591E5001DFBC6 /* MainView.swift in Sources */,
 				B1CF07EF2A758A82001DFBC6 /* SystemTimeManager.swift in Sources */,
 				B1CF07EA2A741F84001DFBC6 /* TimerViewModel.swift in Sources */,
+				B1B445272A75BAC9008E81D9 /* Atomic.swift in Sources */,
 				B1CF07DA2A741BD6001DFBC6 /* TimerView.swift in Sources */,
 				B1CF07D82A741BD6001DFBC6 /* HelloObservabilityApp.swift in Sources */,
 				B1CF07E62A741BEC001DFBC6 /* TimeManager.swift in Sources */,

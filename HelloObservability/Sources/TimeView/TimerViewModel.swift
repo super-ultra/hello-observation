@@ -12,6 +12,7 @@ protocol TimerViewModel: Observable {
 final class DefaultTimerViewModel: TimerViewModel {
     
     init(timeManager: TimeManager) {
+        self.time = timeManager.time
         self.timeManager = timeManager
         
         setup()
@@ -19,7 +20,7 @@ final class DefaultTimerViewModel: TimerViewModel {
     
     // MARK: - TimerViewModel
     
-    private(set) var time: Duration = .zero
+    private(set) var time: Duration
     
     // MARK: - Private
     
@@ -27,7 +28,6 @@ final class DefaultTimerViewModel: TimerViewModel {
     
     private func setup() {
         Task {
-            time = await timeManager.time
             for await newTime in await timeManager.timeStream {
                 time = newTime
             }
