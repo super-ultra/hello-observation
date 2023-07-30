@@ -8,8 +8,9 @@
 import SwiftUI
 
 
-enum NavigationDestination: String, Equatable, Identifiable {
-    case timer = "Timer"
+enum NavigationDestination: String, Equatable, Identifiable, CaseIterable {
+    case observationTimer = "Observation Timer"
+    case combineTimer = "Combine Timer"
     
     var id: String {
         rawValue
@@ -25,19 +26,23 @@ struct MainView: View {
     
     var body: some View {
         NavigationStack(path: $path) {
-            List([NavigationDestination.timer]) { destination in
+            List(NavigationDestination.allCases) { destination in
                 NavigationLink(destination.rawValue, value: destination)
             }
+            .navigationTitle("Hello")
             .navigationDestination(for: NavigationDestination.self) { destination in
                 switch destination {
-                case .timer:
-                    TimerView()
+                case .observationTimer:
+                    ObservationTimerView()
+                case .combineTimer:
+                    CombineTimerView(viewModel: CombineTimerViewModelImpl.system())
                 }
             }
         }
     }
     
 }
+
 
 #Preview {
     MainView()

@@ -7,13 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B12E1E312A76FABE008E6741 /* CombineTimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12E1E302A76FABE008E6741 /* CombineTimeView.swift */; };
+		B12E1E332A76FAC5008E6741 /* CombineTimeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12E1E322A76FAC5008E6741 /* CombineTimeViewModel.swift */; };
 		B1B4452A2A75D795008E81D9 /* ConcurrencyToolbox in Frameworks */ = {isa = PBXBuildFile; productRef = B1B445292A75D795008E81D9 /* ConcurrencyToolbox */; };
 		B1CF07D82A741BD6001DFBC6 /* HelloObservabilityApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CF07D72A741BD6001DFBC6 /* HelloObservabilityApp.swift */; };
-		B1CF07DA2A741BD6001DFBC6 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CF07D92A741BD6001DFBC6 /* TimerView.swift */; };
+		B1CF07DA2A741BD6001DFBC6 /* ObservationTimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CF07D92A741BD6001DFBC6 /* ObservationTimerView.swift */; };
 		B1CF07DC2A741BD9001DFBC6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1CF07DB2A741BD9001DFBC6 /* Assets.xcassets */; };
 		B1CF07DF2A741BD9001DFBC6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1CF07DE2A741BD9001DFBC6 /* Preview Assets.xcassets */; };
 		B1CF07E62A741BEC001DFBC6 /* TimeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CF07E52A741BEC001DFBC6 /* TimeManager.swift */; };
-		B1CF07EA2A741F84001DFBC6 /* TimerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CF07E92A741F84001DFBC6 /* TimerViewModel.swift */; };
+		B1CF07EA2A741F84001DFBC6 /* ObservationTimerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CF07E92A741F84001DFBC6 /* ObservationTimerViewModel.swift */; };
 		B1CF07ED2A758A65001DFBC6 /* StaticTimeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CF07EC2A758A65001DFBC6 /* StaticTimeManager.swift */; };
 		B1CF07EF2A758A82001DFBC6 /* SystemTimeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CF07EE2A758A82001DFBC6 /* SystemTimeManager.swift */; };
 		B1CF07F32A758E79001DFBC6 /* AsyncAlgorithms in Frameworks */ = {isa = PBXBuildFile; productRef = B1CF07F22A758E79001DFBC6 /* AsyncAlgorithms */; };
@@ -21,13 +23,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B12E1E302A76FABE008E6741 /* CombineTimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineTimeView.swift; sourceTree = "<group>"; };
+		B12E1E322A76FAC5008E6741 /* CombineTimeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineTimeViewModel.swift; sourceTree = "<group>"; };
 		B1CF07D42A741BD6001DFBC6 /* HelloObservability.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloObservability.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1CF07D72A741BD6001DFBC6 /* HelloObservabilityApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloObservabilityApp.swift; sourceTree = "<group>"; };
-		B1CF07D92A741BD6001DFBC6 /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
+		B1CF07D92A741BD6001DFBC6 /* ObservationTimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservationTimerView.swift; sourceTree = "<group>"; };
 		B1CF07DB2A741BD9001DFBC6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B1CF07DE2A741BD9001DFBC6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B1CF07E52A741BEC001DFBC6 /* TimeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeManager.swift; sourceTree = "<group>"; };
-		B1CF07E92A741F84001DFBC6 /* TimerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewModel.swift; sourceTree = "<group>"; };
+		B1CF07E92A741F84001DFBC6 /* ObservationTimerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservationTimerViewModel.swift; sourceTree = "<group>"; };
 		B1CF07EC2A758A65001DFBC6 /* StaticTimeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticTimeManager.swift; sourceTree = "<group>"; };
 		B1CF07EE2A758A82001DFBC6 /* SystemTimeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemTimeManager.swift; sourceTree = "<group>"; };
 		B1CF07F42A7591E5001DFBC6 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -46,6 +50,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B12E1E2F2A76FAA7008E6741 /* CombineTimeView */ = {
+			isa = PBXGroup;
+			children = (
+				B12E1E302A76FABE008E6741 /* CombineTimeView.swift */,
+				B12E1E322A76FAC5008E6741 /* CombineTimeViewModel.swift */,
+			);
+			path = CombineTimeView;
+			sourceTree = "<group>";
+		};
 		B1CF07CB2A741BD6001DFBC6 = {
 			isa = PBXGroup;
 			children = (
@@ -84,7 +97,8 @@
 		B1CF07E72A741BFA001DFBC6 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				B1CF07F02A758AAA001DFBC6 /* TimeView */,
+				B12E1E2F2A76FAA7008E6741 /* CombineTimeView */,
+				B1CF07F02A758AAA001DFBC6 /* ObservationTimeView */,
 				B1CF07EB2A758A52001DFBC6 /* TimeManager */,
 				B1CF07D72A741BD6001DFBC6 /* HelloObservabilityApp.swift */,
 				B1CF07F42A7591E5001DFBC6 /* MainView.swift */,
@@ -110,13 +124,13 @@
 			path = TimeManager;
 			sourceTree = "<group>";
 		};
-		B1CF07F02A758AAA001DFBC6 /* TimeView */ = {
+		B1CF07F02A758AAA001DFBC6 /* ObservationTimeView */ = {
 			isa = PBXGroup;
 			children = (
-				B1CF07D92A741BD6001DFBC6 /* TimerView.swift */,
-				B1CF07E92A741F84001DFBC6 /* TimerViewModel.swift */,
+				B1CF07D92A741BD6001DFBC6 /* ObservationTimerView.swift */,
+				B1CF07E92A741F84001DFBC6 /* ObservationTimerViewModel.swift */,
 			);
-			path = TimeView;
+			path = ObservationTimeView;
 			sourceTree = "<group>";
 		};
 		B1EF5F142A766C03003E49B8 /* Frameworks */ = {
@@ -206,11 +220,13 @@
 			files = (
 				B1CF07ED2A758A65001DFBC6 /* StaticTimeManager.swift in Sources */,
 				B1CF07F52A7591E5001DFBC6 /* MainView.swift in Sources */,
+				B12E1E332A76FAC5008E6741 /* CombineTimeViewModel.swift in Sources */,
 				B1CF07EF2A758A82001DFBC6 /* SystemTimeManager.swift in Sources */,
-				B1CF07EA2A741F84001DFBC6 /* TimerViewModel.swift in Sources */,
-				B1CF07DA2A741BD6001DFBC6 /* TimerView.swift in Sources */,
+				B1CF07EA2A741F84001DFBC6 /* ObservationTimerViewModel.swift in Sources */,
+				B1CF07DA2A741BD6001DFBC6 /* ObservationTimerView.swift in Sources */,
 				B1CF07D82A741BD6001DFBC6 /* HelloObservabilityApp.swift in Sources */,
 				B1CF07E62A741BEC001DFBC6 /* TimeManager.swift in Sources */,
+				B12E1E312A76FABE008E6741 /* CombineTimeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -357,6 +373,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				MERGED_BINARY_TYPE = automatic;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ultra.HelloObservability;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -387,6 +404,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				MERGED_BINARY_TYPE = automatic;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ultra.HelloObservability;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;

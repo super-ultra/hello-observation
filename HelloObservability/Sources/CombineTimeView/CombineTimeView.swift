@@ -1,17 +1,18 @@
 import SwiftUI
 
+
 @MainActor
-struct TimerView: View {
+struct CombineTimerView<Model: CombineTimerViewModel>: View {
     
-    @State
-    var viewModel: TimerViewModel = DefaultTimerViewModel.system()
+    @StateObject
+    var viewModel: Model
     
     var body: some View {
         VStack {
             Image(systemName: "globe")
                 .imageScale(.large)
                 .foregroundStyle(.tint)
-            Text("Hello, timer!")
+            Text("Hello, Combine!")
             Text("\(viewModel.time.formatted())")
         }
         .padding()
@@ -20,5 +21,5 @@ struct TimerView: View {
 
 
 #Preview {
-    TimerView()
+    CombineTimerView(viewModel: CombineTimerViewModelImpl.static(time: .seconds(12)))
 }

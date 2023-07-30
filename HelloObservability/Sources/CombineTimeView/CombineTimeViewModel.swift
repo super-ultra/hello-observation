@@ -1,15 +1,14 @@
 import Foundation
-import Observation
+import Combine
 
 
 @MainActor
-protocol TimerViewModel: Observable {
+protocol CombineTimerViewModel: ObservableObject {
     var time: Duration { get }
 }
 
 
-@Observable
-final class DefaultTimerViewModel: TimerViewModel {
+final class CombineTimerViewModelImpl: CombineTimerViewModel {
     
     init(timeManager: TimeManager) {
         self.time = timeManager.atomicTime
@@ -18,8 +17,9 @@ final class DefaultTimerViewModel: TimerViewModel {
         setup()
     }
     
-    // MARK: - TimerViewModel
+    // MARK: - ObservationTimerViewModel
     
+    @Published
     private(set) var time: Duration
     
     // MARK: - Private
@@ -36,14 +36,14 @@ final class DefaultTimerViewModel: TimerViewModel {
 }
 
 
-extension DefaultTimerViewModel {
+extension CombineTimerViewModelImpl {
     
-    static func `static`(time: Duration) -> DefaultTimerViewModel {
-        DefaultTimerViewModel(timeManager: StaticTimeManager(time: time))
+    static func `static`(time: Duration) -> CombineTimerViewModelImpl {
+        CombineTimerViewModelImpl(timeManager: StaticTimeManager(time: time))
     }
     
-    static func system() -> DefaultTimerViewModel {
-        DefaultTimerViewModel(timeManager: SystemTimeManager())
+    static func system() -> CombineTimerViewModelImpl {
+        CombineTimerViewModelImpl(timeManager: SystemTimeManager())
     }
     
 }
