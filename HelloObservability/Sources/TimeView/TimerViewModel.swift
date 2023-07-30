@@ -12,7 +12,7 @@ protocol TimerViewModel: Observable {
 final class DefaultTimerViewModel: TimerViewModel {
     
     init(timeManager: TimeManager) {
-        self.time = timeManager.time
+        self.time = timeManager.atomicTime
         self.timeManager = timeManager
         
         setup()

@@ -3,7 +3,8 @@ import SwiftUI
 @MainActor
 struct TimerView: View {
     
-    let viewModel: TimerViewModel = DefaultTimerViewModel.system()
+    @State
+    var viewModel: TimerViewModel = DefaultTimerViewModel.system()
     
     var body: some View {
         VStack {

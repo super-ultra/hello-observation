@@ -9,10 +9,12 @@ import Foundation
 
 
 actor StaticTimeManager: TimeManager {
+    let atomicTime: Duration
     let time: Duration
     let timeStream: AsyncStream<Duration>
     
     init(time: Duration) {
+        self.atomicTime = time
         self.time = time
         self.timeStream = AsyncStream { _ in }
     }

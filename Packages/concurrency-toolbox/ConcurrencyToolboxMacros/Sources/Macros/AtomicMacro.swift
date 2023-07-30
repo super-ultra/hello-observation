@@ -6,8 +6,6 @@ import SwiftSyntaxMacros
 import SwiftDiagnostics
 
 
-
-
 public struct AtomicMacro: AccessorMacro {
     
     public static func expansion(
@@ -48,6 +46,7 @@ public struct AtomicMacro: AccessorMacro {
     
 }
 
+
 extension AtomicMacro: PeerMacro {
 
     public static func expansion(
@@ -76,8 +75,6 @@ extension AtomicMacro: PeerMacro {
     }
     
 }
-
-
 
 
 enum AtomicMacroDiagnostic: String, DiagnosticMessage {

@@ -21,7 +21,12 @@ actor SystemTimeManager: TimeManager {
     // MARK: - TimeManager
     
     @Atomic
-    private(set) nonisolated var time: Duration = .zero
+    private(set) nonisolated var atomicTime: Duration = .zero
+    
+    // TODO: Remove - https://github.com/apple/swift/issues/63730
+    private let _atomicTime: Atomic<Duration> = Atomic(wrappedValue: .zero)
+    
+    private(set) var time: Duration = .zero
     
     private(set) lazy var timeStream = AsyncStream<Duration> { continuation in
         timeStreamContinuation = continuation
@@ -36,6 +41,7 @@ actor SystemTimeManager: TimeManager {
         let start = SuspendingClock.Instant.now
         for await newTime in AsyncTimerSequence.repeating(every: step) {
             time = start.duration(to: newTime)
+            atomicTime = time
             timeStreamContinuation?.yield(time)
         }
     }

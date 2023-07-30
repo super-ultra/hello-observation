@@ -7,8 +7,7 @@
 
 import Foundation
 
-
-@propertyWrapper
+// @propertyWrapper
 public final class Atomic<T>: @unchecked Sendable {
 
     public init(value: T, lock: NSLocking) {
@@ -19,8 +18,12 @@ public final class Atomic<T>: @unchecked Sendable {
     // MARK: - @propertyWrapper
     
     public var wrappedValue: T {
-        get { lock.perform { value } }
-        set { lock.perform { value = newValue } }
+        get {
+            lock.perform { value }
+        }
+        set {
+            lock.perform { value = newValue }
+        }
     }
     
     public convenience init(wrappedValue: T) {

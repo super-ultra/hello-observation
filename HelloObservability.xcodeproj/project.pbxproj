@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		B1B4452A2A75D795008E81D9 /* ConcurrencyToolbox in Frameworks */ = {isa = PBXBuildFile; productRef = B1B445292A75D795008E81D9 /* ConcurrencyToolbox */; };
-		B1B4452C2A75D795008E81D9 /* ConcurrencyToolboxExample in Frameworks */ = {isa = PBXBuildFile; productRef = B1B4452B2A75D795008E81D9 /* ConcurrencyToolboxExample */; };
 		B1CF07D82A741BD6001DFBC6 /* HelloObservabilityApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CF07D72A741BD6001DFBC6 /* HelloObservabilityApp.swift */; };
 		B1CF07DA2A741BD6001DFBC6 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CF07D92A741BD6001DFBC6 /* TimerView.swift */; };
 		B1CF07DC2A741BD9001DFBC6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1CF07DB2A741BD9001DFBC6 /* Assets.xcassets */; };
@@ -41,7 +40,6 @@
 			files = (
 				B1B4452A2A75D795008E81D9 /* ConcurrencyToolbox in Frameworks */,
 				B1CF07F32A758E79001DFBC6 /* AsyncAlgorithms in Frameworks */,
-				B1B4452C2A75D795008E81D9 /* ConcurrencyToolboxExample in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,6 +51,7 @@
 			children = (
 				B1CF07D62A741BD6001DFBC6 /* HelloObservability */,
 				B1CF07D52A741BD6001DFBC6 /* Products */,
+				B1EF5F142A766C03003E49B8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -120,6 +119,13 @@
 			path = TimeView;
 			sourceTree = "<group>";
 		};
+		B1EF5F142A766C03003E49B8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -139,7 +145,6 @@
 			packageProductDependencies = (
 				B1CF07F22A758E79001DFBC6 /* AsyncAlgorithms */,
 				B1B445292A75D795008E81D9 /* ConcurrencyToolbox */,
-				B1B4452B2A75D795008E81D9 /* ConcurrencyToolboxExample */,
 			);
 			productName = HelloObservability;
 			productReference = B1CF07D42A741BD6001DFBC6 /* HelloObservability.app */;
@@ -436,10 +441,6 @@
 		B1B445292A75D795008E81D9 /* ConcurrencyToolbox */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = ConcurrencyToolbox;
-		};
-		B1B4452B2A75D795008E81D9 /* ConcurrencyToolboxExample */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = ConcurrencyToolboxExample;
 		};
 		B1CF07F22A758E79001DFBC6 /* AsyncAlgorithms */ = {
 			isa = XCSwiftPackageProductDependency;
