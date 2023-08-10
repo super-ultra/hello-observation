@@ -8,7 +8,7 @@
 import Foundation
 
 // @propertyWrapper
-public final class Atomic<T>: @unchecked Sendable {
+public final class Atomic<T> {
 
     public init(value: T, lock: NSLocking) {
         self.lock = lock
@@ -36,6 +36,9 @@ public final class Atomic<T>: @unchecked Sendable {
     private var value: T
     
 }
+
+
+extension Atomic: @unchecked Sendable where T: Sendable {}
 
 
 extension NSLocking {
