@@ -7,7 +7,7 @@
 
 import Foundation
 
-// @propertyWrapper
+@propertyWrapper
 public final class Atomic<T> {
 
     public init(value: T, lock: NSLocking) {
@@ -27,7 +27,7 @@ public final class Atomic<T> {
     }
     
     public convenience init(wrappedValue: T) {
-        self.init(value: wrappedValue, lock: NSRecursiveLock())
+        self.init(value: wrappedValue, lock: NSLock())
     }
     
     // MARK: - Private
